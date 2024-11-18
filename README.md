@@ -69,6 +69,6 @@ Montagem do Circuito: Siga o esquema acima para montar os componentes em uma pro
 
 Mudança no código: Insira o seu ssid e a senha de sua rede wi-fi nas linhas 8 e 9 do código. Caso deseje, altere a temperatura alvo na linha 55.
 
-Upload do Código: Utilize a Arduino IDE para carregar o código no ESP32.
+Upload do Código: Utilize a Arduino IDE para carregar o código no ESP32. É importante ressaltar que o arquivo do código deve estar em uma pasta de mesmo nome.
 
 Monitoramento: Acompanhe os valores no Serial Monitor ou em um cliente MQTT, lembrando que o host é **"test.mosquitto.org"**, a porta é **"8081"**, e o tópico é **"esp32/temperatura"**
