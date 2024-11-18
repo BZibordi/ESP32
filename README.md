@@ -1,5 +1,5 @@
 # ESP32
-Este projeto utiliza um ESP32 para monitorar a temperatura ambiente por meio de um sensor TMP36 e acionar um LED quando a temperatura ultrapassar um valor crítico. Além disso, a temperatura é enviada periodicamente para um broker MQTT para monitoramento remoto. O projeto inclui esquemática de hardware e código-fonte totalmente documentado, permitindo que qualquer pessoa o reproduza.
+Este repositório é dedicado ao projeto de Objetos Inteligentes Conectados, onde foi desenvolvido um protótipo com ESP32, para atender as necessidades da ODS 9, junto de uma integração IoT via protocolo MQTT.
 
 
 ## **Hardware**
