@@ -2,9 +2,8 @@
 Descrição do Projeto
 Este projeto utiliza um ESP32 para monitorar a temperatura ambiente por meio de um sensor TMP36 e acionar um LED quando a temperatura ultrapassar um valor crítico (25°C). Além disso, a temperatura é enviada periodicamente para um broker MQTT para monitoramento remoto. O projeto inclui esquemática de hardware e código-fonte totalmente documentado, permitindo que qualquer pessoa o reproduza.
 
-Requisitos
 
-##**Hardware**
+## **Hardware**
 
 -ESP32: Microcontrolador com suporte a Wi-Fi. 
 
@@ -18,7 +17,7 @@ Requisitos
 
 
 
-##**Software**
+## **Software**
 
 Arduino IDE: Ambiente de desenvolvimento.
 
@@ -26,28 +25,31 @@ Broker MQTT (Mosquitto): Para transmissão dos dados de temperatura.
 
 
 
-##**Bibliotecas Necessárias:**
+## **Bibliotecas Necessárias:**
 WiFi.h
+
 PubSubClient.h
 
 
 
-##**Documentação do Código**
+## **Documentação do Código**
 
-O código principal foi dividido em etapas para organização e fácil compreensão. O arquivo principal é main.ino, que contém:
+O arquivo principal é ESP32.ino, que foi dividido em algumas etapas, sendo 
 
-Conexão Wi-Fi: Configuração da rede sem fio.
+1- A conexão wi-fi
 
-Conexão com o Broker MQTT: Estabelecimento de conexão e tratamento de erros.
+2- A conexão com o broker MQTT Mosquitto. (via função reconnect()) 
 
-Leitura de Temperatura: Monitoramento do sensor TMP36.
+3- A leitura de temperatura, onde é definido no código uma temperatura em celsius. 
 
-Acionamento do LED: Ligação do LED caso a temperatura ultrapasse um valor X.
+4- Se o sensor de temperatura TMP36 detectar uma temperatura maior que o número definido, o led irá acender. 
 
-Envio de Dados MQTT: Publicação da temperatura no broker.
+5- Seus valores são impressos no Serial Monitor do Arduino IDE
+
+6- Os valores são enviados via protocolo MQTT ao broker.
 
 
-##**Conexões de Hardware**
+## **Conexões de Hardware**
 As conexões físicas foram feitas da seguinte maneira:
 
 1-	GND do ESP32 – Ânodo do LED (por meio de um resistor de 220 Ω)
@@ -62,7 +64,7 @@ As conexões físicas foram feitas da seguinte maneira:
 
 
 
-##**Instruções para Reprodução**
+## **Instruções para Reprodução**
 Montagem do Circuito: Siga o esquema acima para montar os componentes em uma protoboard.
 
 Mudança no código: Insira o seu ssid e a senha de sua rede wi-fi nas linhas 8 e 9 do código. Caso deseje, altere a temperatura alvo na linha 55.
