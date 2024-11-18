@@ -1,6 +1,5 @@
 # ESP32
-Descrição do Projeto
-Este projeto utiliza um ESP32 para monitorar a temperatura ambiente por meio de um sensor TMP36 e acionar um LED quando a temperatura ultrapassar um valor crítico (25°C). Além disso, a temperatura é enviada periodicamente para um broker MQTT para monitoramento remoto. O projeto inclui esquemática de hardware e código-fonte totalmente documentado, permitindo que qualquer pessoa o reproduza.
+Este projeto utiliza um ESP32 para monitorar a temperatura ambiente por meio de um sensor TMP36 e acionar um LED quando a temperatura ultrapassar um valor crítico. Além disso, a temperatura é enviada periodicamente para um broker MQTT para monitoramento remoto. O projeto inclui esquemática de hardware e código-fonte totalmente documentado, permitindo que qualquer pessoa o reproduza.
 
 
 ## **Hardware**
@@ -67,7 +66,7 @@ As conexões físicas foram feitas da seguinte maneira:
 ## **Instruções para Reprodução**
 Montagem do Circuito: Siga o esquema acima para montar os componentes em uma protoboard.
 
-Mudança no código: Insira o seu ssid e a senha de sua rede wi-fi nas linhas 8 e 9 do código. Caso deseje, altere a temperatura alvo na linha 55.
+Mudança no código: Insira o seu ssid e a senha de sua rede wi-fi nas linhas 8 e 9 do código. Caso deseje, altere a temperatura crítica na linha 55.
 
 Upload do Código: Utilize a Arduino IDE para carregar o código no ESP32. É importante ressaltar que o arquivo do código deve estar em uma pasta de mesmo nome.
 
